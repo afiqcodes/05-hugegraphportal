@@ -1,0 +1,23 @@
+{
+  "name": "hugegraph-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:client": "vite --host 127.0.0.1",
+    "dev:server": "node --watch --env-file-if-exists=.env server/index.js",
+    "build": "vite build",
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "test": "node --test --test-isolation=none tests/*.test.js"
+  },
+  "dependencies": {
+    "cytoscape": "3.34.4",
+    "express": "5.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": { "vite": "7.3.1" },
+  "overrides": { "rollup": "4.63.4", "esbuild": "0.27.5", "postcss": "8.5.31" },
+  "engines": { "node": ">=22.12.0" }
+}
